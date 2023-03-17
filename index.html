@@ -16,7 +16,6 @@
 
                 <!-- SIDE_BAR_HEADER-->
                 <div class="side-bar-header">
-
                     <div class="user">
                         <img src="img/avatar_1.jpg" alt="img">
                         <span>Michele</span>
@@ -50,6 +49,12 @@
 
                 <!-- SIDE_BAR_CONTACTS-->
                 <div class="side-bar-contacts">
+                    <div v-for="element in contacts" class="contact">
+                        <img src="element.avatar" alt="img">
+                        
+                        {{element.avatar}}
+                        {{element.name}}
+                    </div>
                     
                 </div>
             </aside>
@@ -70,16 +75,27 @@
                     </div>
                 </div>
 
+
                 <!-- CENTER_MESSAGES-->
                 <div class="center-messages">
-                    <div v-for="(element, index) in contacts">
-                        
-                        <div v-for="(sms, index) in element.messages">
-                            {{sms.message}}
+                    <!-- MESSAGES_SENT -->
+                    <div class="container-message-sent">
+                        <div class="message-sent">
+                            <span>Hai portato a spasso il cane?</span>
+                        </div>
+                        <div class="message-sent">
+                            <span>Ricordati di sistemare i panni</span>
+                        </div>
+                    </div>
+                    <!-- MESSAGES_RECEIVED -->
+                    <div class="container-message-received">
+                        <div class="message-received">
+                            <span>Tutto fatto!</span>
                         </div>
                     </div>
                 </div>
                 
+
                 <!-- CENTER_TYPETEXT-->
                 <div class="center-typetext">
                     <i class="fa-regular fa-face-smile"></i>
