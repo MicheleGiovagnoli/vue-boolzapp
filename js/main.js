@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            var:'',
             contacts: [
                 {
                 name: 'Michele',

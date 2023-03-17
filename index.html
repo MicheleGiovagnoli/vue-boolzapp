@@ -72,7 +72,12 @@
 
                 <!-- CENTER_MESSAGES-->
                 <div class="center-messages">
-
+                    <div v-for="(element, index) in contacts">
+                        
+                        <div v-for="(sms, index) in element.messages">
+                            {{sms.message}}
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- CENTER_TYPETEXT-->
