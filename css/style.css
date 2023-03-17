@@ -1,5 +1,29 @@
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-}
+/*************************************************
+    GENERAL STYLES
+ *************************************************/
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    main{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+    }
+    /*************************************************
+        SIDE_BAR
+     *************************************************/
+        .side-bar{
+            width:35%;
+            height: 100%;
+            background-color: red;
+        }
+        /*************************************************
+           CENTER
+         *************************************************/
+            .center{
+                width: 65%;
+                height: 100%;
+                background-color: green;
+            }
