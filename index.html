@@ -50,9 +50,7 @@
                 <!-- SIDE_BAR_CONTACTS-->
                 <div class="side-bar-contacts">
                     <div v-for="element in contacts" class="contact">
-                        <img src="element.avatar" alt="img">
-                        
-                        {{element.avatar}}
+                        <img :src="element.avatar" alt="img">
                         {{element.name}}
                     </div>
                     

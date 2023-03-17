@@ -101,11 +101,14 @@
         .side-bar-contacts{
             width: 100%;
             height: calc(100% - 150px);
-            background-color: whitesmoke;
+            background-color: white;
+            overflow-y: auto;
         }
         .contact{
             display: flex;
             align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid whitesmoke;
         }
         .contact img{
             width: 50px;
