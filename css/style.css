@@ -19,24 +19,87 @@
             height: 100%;
             background-color: red;
         }
+
+        /* SIDE_BAR_HEADER */
         .side-bar-header{
             width: 100%;
             height: 50px;
             background-color: whitesmoke;
+            display: flex;
+            justify-content: space-between;
         }
+            .user{
+                display: flex;
+                align-items: center;
+            }
+            .user img{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+            }
+            .icon{
+                width: 100px;
+                padding: 5px;
+                color: grey;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+            
+        /* SIDE_BAR_NOTIFICATIONS */
         .side-bar-notifications{
             width: 100%;
-            height: 50px;
+            height: 60px;
+            padding: 5px 10px;
             background-color: aqua;
+            display: flex;
+            align-items: center;
         }
+            .bell{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                margin-right: 5px;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: aqua;
+            }
+            .message h3{
+                font-size: 14px
+            }
+            .message span{
+                text-decoration: underline;
+                font-size: 12px
+            }
+        /* SIDE_BAR_NAV */
         .side-bar-nav{
             width: 100%;
             height: 40px;
+            padding-top: 5px;
             background-color: antiquewhite;
         }
+            .contacts-search{
+                width: 95%;
+                height: 80%;
+                margin: auto;
+                background-color: white;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .contacts-search i {
+                color: grey;
+            }
+            .contacts-search input{
+                width:80% ;
+                height: 100%;
+                border: none;
+            }
         .side-bar-contacts{
             width: 100%;
-            height: calc(100% - 140px);
+            height: calc(100% - 150px);
             background-color: whitesmoke;
         }
         /*************************************************
@@ -52,6 +115,8 @@
                 height: 50px;
                 background-color: whitesmoke;
                 border-left: 1px solid grey;
+                display: flex;
+                justify-content: space-between;
             }
             .center-messages{
                 width: 100%;
