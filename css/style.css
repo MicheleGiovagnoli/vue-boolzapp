@@ -108,7 +108,7 @@
             .center{
                 width: 65%;
                 height: 100%;
-                background-color: green;
+               
             }
             .center-header{
                 width: 100%;
@@ -121,10 +121,21 @@
             .center-messages{
                 width: 100%;
                 height: calc(100% - 100px);
+                background-image: url(../img/mine.jpg);
             }
             .center-typetext{
                 width: 100%;
                 height: 50px;
-                background-color: whitesmoke;
+                background-color: antiquewhite;
                 border-left: 1px solid grey;
+                color: grey;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .center-typetext input{
+                width: 80%;
+                height: 70%;
+                border-radius: 5px;
+                border: none;
             }
