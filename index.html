@@ -17,8 +17,8 @@
                 <!-- SIDE_BAR_HEADER-->
                 <div class="side-bar-header">
                     <div class="user">
-                        <img src="img/avatar_1.jpg" alt="img">
-                        <span>Michele</span>
+                        <img src="img/avatar_io.jpg" alt="img">
+                        <span>Sofia</span>
                     </div>
                     <div class="icon">
                         <i class="fa-regular fa-circle"></i>
@@ -43,13 +43,13 @@
                 <div class="side-bar-nav">
                     <div class="contacts-search">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" placeholder="cerca/inizia nuova chat" v-model="parola" @keyup.enter="activeAccount" >
+                        <input type="text" placeholder="cerca/inizia nuova chat" v-model="parola">
                     </div>
                 </div>
 
                 <!-- SIDE_BAR_CONTACTS-->
                 <div class="side-bar-contacts" >
-                    <div v-for="(element, index) in contacts" class="contact" @click="setActiveContact(index)" v-show="element.name.includes(parola)">
+                    <div v-for="(element, index) in contacts" class="contact" @click="setActiveContact(index)" v-show="lowerCase(index)"> <!-- element.name.includes(parola)"-->
                         <img :src="element.avatar" alt="img">
                         {{element.name}}
                     </div>
@@ -63,8 +63,8 @@
                 <!-- CENTER_HEADER-->
                 <div class="center-header">
                     <div class="user">
-                        <img src="img/avatar_1.jpg" alt="img">
-                        <span>Michele</span>
+                        <img :src="contacts[activeContact].avatar" alt="img">
+                        <span>{{contacts[activeContact].name}}</span>
                     </div>
                     <div class="icon">
                         <i class="fa-solid fa-magnifying-glass"></i>

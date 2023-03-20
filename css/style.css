@@ -6,9 +6,17 @@
         margin: 0px;
         box-sizing: border-box;
     }
-    main{
+    #app{
         width: 100vw;
         height: 100vh;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       background-color: brown;
+    }
+    main{
+        width: 90%;
+        height: 90%;
         display: flex;
     }
     
@@ -121,8 +129,6 @@
          *************************************************/
             .center{
                 width: 65%;
-                height: 100%;
-               
             }
             .center-header{
                 width: 100%;

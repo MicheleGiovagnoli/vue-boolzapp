@@ -194,6 +194,14 @@ createApp({
             };
             this.contacts[this.activeContact].messages.push(newMessage);
         },
+        lowerCase(index){
+            let lowerParola = this.parola.toLowerCase();
+            let lowerName = this.contacts[index].name.toLowerCase();
+            let control = lowerName.includes(lowerParola);
+            return control
+            console.log(control);
+            console.log(lowerName);   
+        }
         },
     mounted(){
     }
