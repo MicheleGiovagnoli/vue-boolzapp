@@ -49,7 +49,7 @@
 
                 <!-- SIDE_BAR_CONTACTS-->
                 <div class="side-bar-contacts">
-                    <div v-for="element in contacts" class="contact">
+                    <div v-for="(element, index) in contacts" class="contact" @click="setActiveContact(index)">
                         <img :src="element.avatar" alt="img">
                         {{element.name}}
                     </div>
@@ -77,9 +77,9 @@
                 <!-- CENTER_MESSAGES-->
                 <div class="center-messages">
                     <!-- MESSAGES_SENT -->
-                    <div class="container-message-sent" v-for="(element, index) in contacts">
-                        <div class="center-message sent" v-if="index == 0">
-                            {{element.messages[index].message}}
+                    <div class="container-message-sent" v-for="element in contacts[activeContact].messages">
+                        <div class="center-message sent">
+                            <h3>{{element.message}}</h3>
                         </div>
                     </div>
                     <!-- MESSAGES_RECEIVED -->
