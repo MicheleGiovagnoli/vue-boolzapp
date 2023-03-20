@@ -77,15 +77,9 @@
                 <!-- CENTER_MESSAGES-->
                 <div class="center-messages">
                     <!-- MESSAGES_SENT -->
-                    <div class="container-message-sent" v-for="element in contacts[activeContact].messages">
-                        <div class="center-message sent">
+                    <div class="container-message">
+                        <div class="center-message" :class="element.status" v-for="element in contacts[activeContact].messages">
                             <h3>{{element.message}}</h3>
-                        </div>
-                    </div>
-                    <!-- MESSAGES_RECEIVED -->
-                    <div class="container-message-received">
-                        <div class="center-message received">
-                            <span>Tutto fatto!</span>
                         </div>
                     </div>
                 </div>
