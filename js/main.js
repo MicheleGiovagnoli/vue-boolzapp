@@ -175,14 +175,14 @@ createApp({
             this.activeContact = index;
             console.log(this.activeContact);
         },
-        newMessage(activeContacts){
+        newMessage(activeContact){
             const newMessage = {
                         date: '10/01/2020 15:50:00',
                         message: this.message,
                         status: 'sent'
             };
             this.contacts[this.activeContact].messages.push(newMessage);
-            this.newMessage = '';
+            this.message = '';
         }
     },
     mounted(){
