@@ -5,6 +5,7 @@ createApp({
         return {
             activeContact: 0,
             message: '',
+            parola: '',
             contacts: [
                 {
                 name: 'Michele',
@@ -192,9 +193,8 @@ createApp({
                 status: 'received'
             };
             this.contacts[this.activeContact].messages.push(newMessage);
-        }
-    },
+        },
+        },
     mounted(){
-        
     }
 }).mount('#app')

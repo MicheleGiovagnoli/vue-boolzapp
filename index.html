@@ -43,13 +43,13 @@
                 <div class="side-bar-nav">
                     <div class="contacts-search">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" placeholder="cerca/inizia nuova chat">
+                        <input type="text" placeholder="cerca/inizia nuova chat" v-model="parola" @keyup.enter="activeAccount" >
                     </div>
                 </div>
 
                 <!-- SIDE_BAR_CONTACTS-->
-                <div class="side-bar-contacts">
-                    <div v-for="(element, index) in contacts" class="contact" @click="setActiveContact(index)">
+                <div class="side-bar-contacts" >
+                    <div v-for="(element, index) in contacts" class="contact" @click="setActiveContact(index)" v-show="element.name.includes(parola)">
                         <img :src="element.avatar" alt="img">
                         {{element.name}}
                     </div>
@@ -88,7 +88,7 @@
                 <!-- CENTER_TYPETEXT-->
                 <div class="center-typetext">
                     <i class="fa-regular fa-face-smile"></i>
-                    <input type="text" placeholder="Scrivi un messaggio" v-model="message"@keyup.enter="newMessageSent">
+                    <input type="text" placeholder="Scrivi un messaggio" v-model="message" @keyup.enter="newMessageSent">
                     <i class="fa-solid fa-microphone"></i>
                 </div>
             </section>
