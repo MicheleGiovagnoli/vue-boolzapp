@@ -77,17 +77,14 @@
                 <!-- CENTER_MESSAGES-->
                 <div class="center-messages">
                     <!-- MESSAGES_SENT -->
-                    <div class="container-message-sent">
-                        <div class="message-sent">
-                            <span>Hai portato a spasso il cane?</span>
-                        </div>
-                        <div class="message-sent">
-                            <span>Ricordati di sistemare i panni</span>
+                    <div class="container-message-sent" v-for="(element, index) in contacts">
+                        <div class="center-message sent" v-if="index == 0">
+                            {{element.messages[index].message}}
                         </div>
                     </div>
                     <!-- MESSAGES_RECEIVED -->
                     <div class="container-message-received">
-                        <div class="message-received">
+                        <div class="center-message received">
                             <span>Tutto fatto!</span>
                         </div>
                     </div>
@@ -99,7 +96,6 @@
                     <i class="fa-regular fa-face-smile"></i>
                     <input type="text">
                     <i class="fa-solid fa-microphone"></i>
-
                 </div>
             </section>
         </main>

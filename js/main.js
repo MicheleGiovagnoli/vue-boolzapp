@@ -165,7 +165,8 @@ createApp({
                         }
                     ],
                 }
-            ]
+            ],
+            activeImage:0
         }
     },
     methods: {
