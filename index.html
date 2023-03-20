@@ -79,10 +79,7 @@
                     <!-- MESSAGES_SENT -->
                     <div class="container-message">
                         <div class="center-message" :class="element.status" v-for="element in contacts[activeContact].messages">
-                            <h3>{{element.message}}</h3>
-                        </div>
-                        <div class="new-message">
-
+                            {{element.message}}
                         </div>
                     </div>
                 </div>
@@ -91,7 +88,7 @@
                 <!-- CENTER_TYPETEXT-->
                 <div class="center-typetext">
                     <i class="fa-regular fa-face-smile"></i>
-                    <input type="text" placeholder="Scrivi un messaggio" v-model="message"@keyup.enter="newMessage(activeContact)">
+                    <input type="text" placeholder="Scrivi un messaggio" v-model="message"@keyup.enter="newMessageSent">
                     <i class="fa-solid fa-microphone"></i>
                 </div>
             </section>

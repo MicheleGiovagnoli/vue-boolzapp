@@ -138,6 +138,7 @@
                 width: 100%;
                 height: calc(100% - 100px);
                 background-image: url(../img/mine.jpg);
+                overflow-y: auto;
             }
                 .container-message{                  
                     padding: 10px;

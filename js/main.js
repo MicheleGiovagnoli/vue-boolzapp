@@ -175,7 +175,7 @@ createApp({
             this.activeContact = index;
             console.log(this.activeContact);
         },
-        newMessage(activeContact){
+        newMessageSent(){
             const newMessage = {
                         date: '10/01/2020 15:50:00',
                         message: this.message,
@@ -183,8 +183,18 @@ createApp({
             };
             this.contacts[this.activeContact].messages.push(newMessage);
             this.message = '';
+            setTimeout(this.newMessageReceived, 1000)
+        },
+        newMessageReceived(){
+            const newMessage = {
+                date: '10/01/2020 15:50:00',
+                message: 'Ok',
+                status: 'received'
+            };
+            this.contacts[this.activeContact].messages.push(newMessage);
         }
     },
     mounted(){
+        
     }
 }).mount('#app')
