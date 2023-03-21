@@ -208,9 +208,6 @@ createApp({
             console.log(control);
             console.log(lowerName);   
         },
-        deleteMessage(){
-            this.menu = true;
-        },
         removeMessage(){
             this.contacts[this.activeContact].messages.splice(this.activeMessage,1);
         }
