@@ -76,10 +76,16 @@
 
                 <!-- CENTER_MESSAGES-->
                 <div class="center-messages">
-                    <!-- MESSAGES_SENT -->
-                    <div class="container-message">
-                        <div class="center-message" :class="element.status" v-for="element in contacts[activeContact].messages">
+                    <div class="container-message" @click="menu = !menu">
+                        <div class="center-message"@click="setActiveMessage(index)" :class="element.status" v-for="(element,index) in contacts[activeContact].messages">
                             {{element.message}}
+                            <div class="drop-down" v-show="(index == activeMessage)? menu : ''">
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="container-menu">
+                                    <div class="choice">Message info</div>
+                                    <div class="choice delete" @click="removeMessage">Delete message</div>
+                                </div>
+                            </div>                             
                         </div>
                     </div>
                 </div>

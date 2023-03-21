@@ -6,6 +6,8 @@ createApp({
             activeContact: 0,
             message: '',
             parola: '',
+            menu: false,
+            activeMessage: 0,
             contacts: [
                 {
                 name: 'Michele',
@@ -176,6 +178,10 @@ createApp({
             this.activeContact = index;
             console.log(this.activeContact);
         },
+        setActiveMessage(index){
+            this.activeMessage = index;
+            console.log(this.activeMessage);
+        },
         newMessageSent(){
             const newMessage = {
                         date: '10/01/2020 15:50:00',
@@ -201,6 +207,12 @@ createApp({
             return control
             console.log(control);
             console.log(lowerName);   
+        },
+        deleteMessage(){
+            this.menu = true;
+        },
+        removeMessage(){
+            this.contacts[this.activeContact].messages.splice(this.activeMessage,1);
         }
         },
     mounted(){
