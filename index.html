@@ -87,7 +87,7 @@
                     <div class="container-message" @click="menu = !menu">
                         <div class="center-message"@click="setActiveMessage(index)" :class="element.status" v-for="(element,index) in contacts[activeContact].messages">
                             <span class="message">{{element.message}}</span>
-                            <div class="date">{{element.date}}</div>
+                            <div class="date">{{getOnlyTime(element.date)}}</div>
                             <div class="drop-down" v-show="(index == activeMessage)? menu : ''">
                                 <i class="fa-solid fa-chevron-down"></i>
                                 <div class="container-menu">

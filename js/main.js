@@ -210,7 +210,12 @@ createApp({
         },
         removeMessage(){
             this.contacts[this.activeContact].messages.splice(this.activeMessage,1);
-        }
+        },
+        getOnlyTime(strDateTime){
+            const dateAndTime = strDateTime.split(' ');
+            const hourMinuteSecond = dateAndTime[1].split(':');
+            return `${hourMinuteSecond[0]}:${hourMinuteSecond[1]}`
+        },
         },
     mounted(){
     }
