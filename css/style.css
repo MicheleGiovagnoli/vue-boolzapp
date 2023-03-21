@@ -20,6 +20,9 @@
         display: flex;
     }
     
+    .end{
+        margin-left: 50%;
+    }
     /*************************************************
         SIDE_BAR
      *************************************************/
@@ -123,6 +126,16 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
+            margin-right: 10px;
+        }
+        .info{
+            color: grey;
+            font-size: 10px;
+        }
+        .container-info{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
         }
         /*************************************************
            CENTER
@@ -138,6 +151,10 @@
                 display: flex;
                 justify-content: space-between;
             }
+            .user h4{
+                display: flex;
+                flex-direction: column;
+            }
 
             /* CENTER_MESSAGES */
             .center-messages{
@@ -150,15 +167,14 @@
                     padding: 10px;
                     display: flex;
                     flex-direction: column;
+                    flex-wrap: wrap;
                 }
                 .center-message{
-                    min-width: 40%;
+                    min-width: 30%;
                     max-width: 80%;
                     min-height: 50px;
-                    max-height: 200px;
                     padding: 10px;
                     margin: 10px;
-                    height: 50px;
                     border-radius: 10px;
                     display: flex;
                     align-items: center;
@@ -172,6 +188,11 @@
                 .received{
                     background-color: white;
                     align-self: start;
+                }
+
+                .date{
+                    font-size: 8px;
+                    padding-top: 15px;
                 }
                 .drop-down{
                     position: relative;

@@ -50,10 +50,15 @@
                 <!-- SIDE_BAR_CONTACTS-->
                 <div class="side-bar-contacts" >
                     <div v-for="(element, index) in contacts" class="contact" @click="setActiveContact(index)" v-show="lowerCase(index)"> <!-- element.name.includes(parola)"-->
-                        <img :src="element.avatar" alt="img">
-                        {{element.name}}
+                        <div>
+                            <img :src="element.avatar" alt="img">
+                        </div>
+                        <div class="container-info">
+                            <span>{{element.name}}</span>
+                            <span class="info">Ultimo messaggio inviato</span>
+                        </div>
+                        <span class="info end">12:00</span>
                     </div>
-                    
                 </div>
             </aside>
 
@@ -64,7 +69,10 @@
                 <div class="center-header">
                     <div class="user">
                         <img :src="contacts[activeContact].avatar" alt="img">
-                        <span>{{contacts[activeContact].name}}</span>
+                        <h4>{{contacts[activeContact].name}}
+                            <span class="info">Ultimo accesso oggi alle 12:00</span>
+                        </h4>
+                        
                     </div>
                     <div class="icon">
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -78,7 +86,8 @@
                 <div class="center-messages">
                     <div class="container-message" @click="menu = !menu">
                         <div class="center-message"@click="setActiveMessage(index)" :class="element.status" v-for="(element,index) in contacts[activeContact].messages">
-                            {{element.message}}
+                            <span class="message">{{element.message}}</span>
+                            <div class="date">{{element.date}}</div>
                             <div class="drop-down" v-show="(index == activeMessage)? menu : ''">
                                 <i class="fa-solid fa-chevron-down"></i>
                                 <div class="container-menu">
